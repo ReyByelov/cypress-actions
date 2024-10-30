@@ -15,4 +15,4 @@ jobs:
         with:
           build: npm run build
           start: npm start
-          config-file: cypress/cypress.config.js
+          working-directory: cypress
