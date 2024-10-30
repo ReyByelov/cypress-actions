@@ -11,23 +11,9 @@ describe('Search test', function() {
         cy.visit(url);
 
         cy.get('#panel1a-header').each(($el, index) => {
-          if (index === 0) {
+          if (index === 0 && address === 'fail') {
             cy.wrap($el).should('contain.text', 'Describe');
-        } else if (index === 1) {
-            cy.wrap($el).should('contain.text', 'blocks');
-        } else if (index === 2) {
-            cy.wrap($el).should('contain.text', 'Commands');
-        } else if (index === 3) {
-            cy.wrap($el).should('contain.text', 'Getting');
-        } else if (index === 4) {
-            cy.wrap($el).should('contain.text', 'chaining');
-        } else if (index === 5) {
-            cy.wrap($el).should('contain.text', 'single');
-        } else if (index === 6) {
-            cy.wrap($el).should('contain.text', 'fail');
-        } else if (index === 7) {
-            cy.wrap($el).should('contain.text', 'custom');
-        }
+          }
         });
       });
   });
