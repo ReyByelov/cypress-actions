@@ -12,7 +12,7 @@ describe('Search test', function() {
 
         cy.get('#panel1a-header').each(($el, index) => {
           if (index === 0 && address === 'fail') {
-            cy.wrap($el).should('contain.text', 'Describe');
+            cy.wrap($el).should('contain.text', 'fail');
           }
         });
       });
