@@ -1,0 +1,28 @@
+{
+  "addresses": [
+    {
+      "address": "Describe"
+    },
+    {
+      "address": "blocks"
+    },
+    {
+      "address": "Commands"
+    },
+    {
+      "address": "Getting"
+    },
+    {
+      "address": "chaining"
+    },
+    {
+      "address": "single"
+    },
+    {
+      "address": "fail"
+    },
+    {
+      "address": "custom"
+    }
+  ]
+}
