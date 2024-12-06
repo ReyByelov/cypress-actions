@@ -24,6 +24,7 @@ jobs:
 
       - name: Start Nex app
         run: npm run dev &
+        working-directory: ./
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
