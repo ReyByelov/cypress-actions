@@ -19,9 +19,6 @@
       "address": "single"
     },
     {
-      "address": "fail"
-    },
-    {
       "address": "custom"
     }
   ]
