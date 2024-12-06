@@ -19,12 +19,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Start Nex app
+        run: npm run dev
+        working-directory: ./
+
       - name: Install dependencies in root
         run: npm install
+
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          build: npm run build
-          start: npm start
+          wait-on: 'http://localhost:3000'
+          spec: 'cypress/e2e/search.cy.js'
