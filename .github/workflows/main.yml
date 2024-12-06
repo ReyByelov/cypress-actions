@@ -24,11 +24,9 @@ jobs:
 
       - name: Start Nex app
         run: npm run dev &
-        working-directory: ./
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           wait-on: 'http://localhost:3000'
-          working-directory: cypress
           spec: 'cypress/e2e/search.cy.js'
