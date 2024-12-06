@@ -18,6 +18,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Install dependencies in root
+        run: npm install
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -25,4 +28,3 @@ jobs:
         with:
           build: npm run build
           start: npm start
-          working-directory: cypress
