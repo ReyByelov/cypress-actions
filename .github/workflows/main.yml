@@ -25,8 +25,13 @@ jobs:
       - name: Start Nex app
         run: npm run dev
 
+      - name: Wait for Next app to be ready
+        run: npx wait-on http://localhost:3000
+        working-directory: cypress-actions
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          wait-on: 'http://localhost:3000'
+          working-directory: cypress
+          config-file: cypress/cypress/cypress.config.js
           spec: 'cypress/e2e/search.cy.js'
