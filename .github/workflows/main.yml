@@ -19,19 +19,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install dependencies in root
+      - name: Install dependencies
         run: npm install
-      
-      - name: Install Cypress dependencies
-        run: npm install
-        working-directory: ./cypress
 
-      - name: Start Nex app
+      - name: Start Next app
         run: npm run dev &
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          working-directory: cypress
           wait-on: 'http://localhost:3000'
-          spec: cypress/e2e/search.cy.js
+          config-file: cypress/cypress.config.js
+          spec: 'cypress/e2e/search.cy.js'
