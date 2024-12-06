@@ -30,4 +30,4 @@ jobs:
         with:
           wait-on: 'http://localhost:3000'
           config-file: cypress/cypress.config.js
-          spec: 'cypress/cypress/e2e/search.cy.js'
+          spec: './cypress/cypress/e2e/search.cy.js'
