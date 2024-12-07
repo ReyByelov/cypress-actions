@@ -29,5 +29,5 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           wait-on: 'http://localhost:3000'
-          config-file: cypress/cypress/cypress.config.js
+          config-file: cypress/cypress.config.js
           spec: cypress/cypress/e2e/search.cy.js
