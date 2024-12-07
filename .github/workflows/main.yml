@@ -28,7 +28,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          working-directory: cypress
           wait-on: 'http://localhost:3000'
           config-file: cypress/cypress.config.js
           spec: cypress/e2e/search.cy.js
