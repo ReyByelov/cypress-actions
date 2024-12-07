@@ -31,3 +31,9 @@ jobs:
           wait-on: 'http://localhost:3000'
           browser: chrome
           spec: cypress/e2e/search.cy.js
+
+      - name: Upload Cypress output as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-output
+          path: cypress-actions/cypress/output/bad_addresses.csv
