@@ -8,7 +8,7 @@ describe('Search test', function() {
   csvData.push(headers.join(';'));
 
   testData.addresses.forEach((addressData) => {
-    const address = addressData.address;
+    const address = addressData.address.toLowerCase();
 
     it(`tests address: "${address}"`, function() {
       const url = "http://localhost:3000/fundamentals";
@@ -24,7 +24,7 @@ describe('Search test', function() {
       });
     });
     after(() => {
-      cy.writeFile('cypress/output/bad_addresses.csv', csvData.join('\n'));
+      cy.writeFile(`cypress/output/bad_addresses_${address}.csv`, csvData.join('\n'));
     });
   });
 });

@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-output
-          path: cypress/output/bad_addresses.csv
+          path: cypress/output/bad_addresses_*.csv
